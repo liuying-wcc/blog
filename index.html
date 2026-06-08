@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Camelia · 个人博客</title>
+  <meta name="description" content="Camelia的个人博客 - 记录技术、生活与热爱，在代码的世界里寻找诗意。">
+  <meta name="keywords" content="个人博客, 二次元, 技术, 前端, 编程">
+  <meta name="author" content="Camelia">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Camelia · 个人博客">
+  <meta property="og:description" content="在代码的世界里寻找诗意">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&family=M+PLUS+Rounded+1c:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============ Page Loader ============ -->
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-spinner"></div>
+  </div>
+
+  <!-- ============ Sakura Petals Container ============ -->
+  <div id="sakura-container" aria-hidden="true"></div>
+
+  <!-- ============ Header ============ -->
+  <header id="header">
+    <div class="header-inner">
+      <div class="logo">Camelia<span class="logo-dot">.</span></div>
+      <button class="hamburger" id="hamburger" aria-label="菜单">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav class="tabs" id="tabNav" role="tablist">
+        <button class="tab active" role="tab" aria-selected="true" data-tab="home" aria-controls="home">
+          <i class="fas fa-home"></i><span>主页</span>
+        </button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="blog" aria-controls="blog">
+          <i class="fas fa-pen-fancy"></i><span>文章</span>
+        </button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="projects" aria-controls="projects">
+          <i class="fas fa-code"></i><span>项目</span>
+        </button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="gallery" aria-controls="gallery">
+          <i class="fas fa-images"></i><span>相册</span>
+        </button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="about" aria-controls="about">
+          <i class="fas fa-user-astronaut"></i><span>关于</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============ Main Content ============ -->
+  <main>
+
+    <!-- ===== Tab 1: Home / 主页 ===== -->
+    <section id="home" class="tab-content active" role="tabpanel" aria-label="主页">
+      <div class="hero">
+        <div class="hero-avatar">
+          <div class="hero-avatar-inner">
+            🌸
+          </div>
+        </div>
+        <h1 class="hero-name">Camelia</h1>
+        <p class="hero-tagline">✨ 在代码的世界里寻找诗意 ✨</p>
+        <div class="hero-typing" id="typingText">
+          <span id="typedText"></span><span class="cursor">|</span>
+        </div>
+        <p class="hero-description">
+          热爱技术、动漫与一切美好的事物。<br>
+          这里记录着我的学习笔记、项目心得和生活碎片。<br>
+          愿你我都能在热爱的领域里闪闪发光 🌟
+        </p>
+        <div class="hero-social">
+          <a href="https://github.com/Camelia" target="_blank" rel="noopener" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="#" target="_blank" rel="noopener" title="掘金">
+            <i class="fab fa-zhihu"></i>
+          </a>
+          <a href="#" target="_blank" rel="noopener" title="Bilibili">
+            <i class="fab fa-bilibili"></i>
+          </a>
+          <a href="#" target="_blank" rel="noopener" title="Twitter / X">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" target="_blank" rel="noopener" title="邮箱">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+        <button class="hero-cta" onclick="switchTab('blog')">
+          <i class="fas fa-book-open"></i>
+          浏览文章
+        </button>
+      </div>
+    </section>
+
+    <!-- ===== Tab 2: Blog / 文章 ===== -->
+    <section id="blog" class="tab-content" role="tabpanel" aria-label="文章">
+      <div class="section-header">
+        <h2 class="section-title">📝 文章</h2>
+        <p class="section-subtitle">记录技术与生活的点滴</p>
+      </div>
+      <div class="blog-grid">
+
+        <article class="blog-card reveal">
+          <span class="blog-card-tag tech">技术</span>
+          <h3 class="blog-card-title">从零搭建个人博客：一份完整指南</h3>
+          <p class="blog-card-excerpt">记录我是如何从零开始搭建这个二次元风格的个人博客的，包括技术选型、设计思路和部署过程。希望能给想要搭建自己博客的朋友一些参考。</p>
+          <div class="blog-card-footer">
+            <span class="blog-card-date"><i class="far fa-calendar-alt"></i> 2026-06-08</span>
+            <a href="#" class="blog-card-link">阅读更多 <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="blog-card reveal">
+          <span class="blog-card-tag life">生活</span>
+          <h3 class="blog-card-title">春日の物语：樱花季的随想</h3>
+          <p class="blog-card-excerpt">又是一年樱花盛开的季节。走在落英缤纷的小路上，忽然觉得生活中的美好往往就藏在这些不经意的瞬间里。想把这些温暖的小事都记录下来。</p>
+          <div class="blog-card-footer">
+            <span class="blog-card-date"><i class="far fa-calendar-alt"></i> 2026-04-05</span>
+            <a href="#" class="blog-card-link">阅读更多 <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="blog-card reveal">
+          <span class="blog-card-tag tech">技术</span>
+          <h3 class="blog-card-title">React 18 新特性一览与实战</h3>
+          <p class="blog-card-excerpt">React 18 带来了许多令人兴奋的新特性：并发渲染、自动批处理、Suspense 改进等。本文通过实际案例带你快速上手这些新功能。</p>
+          <div class="blog-card-footer">
+            <span class="blog-card-date"><i class="far fa-calendar-alt"></i> 2026-03-20</span>
+            <a href="#" class="blog-card-link">阅读更多 <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="blog-card reveal">
+          <span class="blog-card-tag note">笔记</span>
+          <h3 class="blog-card-title">CSS 动画技巧：让页面活起来</h3>
+          <p class="blog-card-excerpt">整理了一些实用的 CSS 动画技巧，从基础的关键帧动画到高性能的 GPU 加速动画，让你的页面交互更加生动流畅。</p>
+          <div class="blog-card-footer">
+            <span class="blog-card-date"><i class="far fa-calendar-alt"></i> 2026-03-10</span>
+            <a href="#" class="blog-card-link">阅读更多 <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="blog-card reveal">
+          <span class="blog-card-tag life">生活</span>
+          <h3 class="blog-card-title">我的桌面进化史 2026</h3>
+          <p class="blog-card-excerpt">分享一下今年的桌面 setup 更新，从双屏到 ultrawide 的使用体验，以及各种提升效率的好物推荐。</p>
+          <div class="blog-card-footer">
+            <span class="blog-card-date"><i class="far fa-calendar-alt"></i> 2026-02-15</span>
+            <a href="#" class="blog-card-link">阅读更多 <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="blog-card reveal">
+          <span class="blog-card-tag tech">技术</span>
+          <h3 class="blog-card-title">TypeScript 类型体操进阶指南</h3>
+          <p class="blog-card-excerpt">从入门到进阶的 TypeScript 类型编程学习笔记，涵盖条件类型、映射类型、模板字面量类型等高级用法。</p>
+          <div class="blog-card-footer">
+            <span class="blog-card-date"><i class="far fa-calendar-alt"></i> 2026-01-28</span>
+            <a href="#" class="blog-card-link">阅读更多 <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===== Tab 3: Projects / 项目 ===== -->
+    <section id="projects" class="tab-content" role="tabpanel" aria-label="项目">
+      <div class="section-header">
+        <h2 class="section-title">💻 项目</h2>
+        <p class="section-subtitle">把想法变成代码，把代码变成现实</p>
+      </div>
+      <div class="projects-grid">
+
+        <div class="project-card reveal">
+          <div class="project-icon"><i class="fas fa-blog"></i></div>
+          <h3 class="project-title">Sakura Blog</h3>
+          <p class="project-desc">一个二次元风格的个人博客系统，支持 Markdown 文章、标签分类、评论互动等功能。使用纯前端技术构建，部署在 GitHub Pages 上。</p>
+          <div class="project-tags">
+            <span class="project-tag">HTML/CSS</span>
+            <span class="project-tag js">JavaScript</span>
+            <span class="project-tag">GitHub Pages</span>
+          </div>
+          <div class="project-links">
+            <a href="#" title="查看源码"><i class="fab fa-github"></i></a>
+            <a href="#" title="在线预览"><i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-icon"><i class="fas fa-gamepad"></i></div>
+          <h3 class="project-title">Pixel Art Maker</h3>
+          <p class="project-desc">一个在线像素画绘制工具，支持多种画笔、调色板、图层管理和导出功能。适合像素风格爱好者创作自己的像素艺术作品。</p>
+          <div class="project-tags">
+            <span class="project-tag react">React</span>
+            <span class="project-tag">Canvas</span>
+            <span class="project-tag">TypeScript</span>
+          </div>
+          <div class="project-links">
+            <a href="#" title="查看源码"><i class="fab fa-github"></i></a>
+            <a href="#" title="在线预览"><i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-icon"><i class="fas fa-robot"></i></div>
+          <h3 class="project-title">Anime Recommender</h3>
+          <p class="project-desc">基于协同过滤算法的动漫推荐系统，利用爬虫获取动漫评分数据，为用户提供个性化的动漫推荐。</p>
+          <div class="project-tags">
+            <span class="project-tag py">Python</span>
+            <span class="project-tag">Flask</span>
+            <span class="project-tag">Scikit-learn</span>
+          </div>
+          <div class="project-links">
+            <a href="#" title="查看源码"><i class="fab fa-github"></i></a>
+            <a href="#" title="在线预览"><i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-icon"><i class="fas fa-cloud-music"></i></div>
+          <h3 class="project-title">Moe Music</h3>
+          <p class="project-desc">一款萌系风格的在线音乐播放器，支持歌单管理、歌词展示、均衡器调节等功能。界面可爱，操作流畅。</p>
+          <div class="project-tags">
+            <span class="project-tag vue">Vue 3</span>
+            <span class="project-tag">Vite</span>
+            <span class="project-tag">Tailwind</span>
+          </div>
+          <div class="project-links">
+            <a href="#" title="查看源码"><i class="fab fa-github"></i></a>
+            <a href="#" title="在线预览"><i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== Tab 4: Gallery / 相册 ===== -->
+    <section id="gallery" class="tab-content" role="tabpanel" aria-label="相册">
+      <div class="section-header">
+        <h2 class="section-title">🎨 相册</h2>
+        <p class="section-subtitle">用图像定格美好的瞬间</p>
+      </div>
+      <div class="gallery-grid">
+
+        <div class="gallery-item reveal">
+          <div class="gallery-placeholder">🌅</div>
+          <div class="gallery-overlay">
+            <h4>黄昏海岸</h4>
+            <p>日落时分的大海</p>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal tall">
+          <div class="gallery-placeholder">🌸</div>
+          <div class="gallery-overlay">
+            <h4>樱花的季节</h4>
+            <p>盛开的樱花树</p>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal">
+          <div class="gallery-placeholder">🌙</div>
+          <div class="gallery-overlay">
+            <h4>月夜</h4>
+            <p>宁静的夜晚</p>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal">
+          <div class="gallery-placeholder">🗼</div>
+          <div class="gallery-overlay">
+            <h4>城市夜景</h4>
+            <p>霓虹闪烁的都市</p>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal wide">
+          <div class="gallery-placeholder">🏔️</div>
+          <div class="gallery-overlay">
+            <h4>山间云雾</h4>
+            <p>云海翻涌的山巅</p>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal">
+          <div class="gallery-placeholder">☕</div>
+          <div class="gallery-overlay">
+            <h4>午后咖啡</h4>
+            <p>悠闲的下午茶时光</p>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal">
+          <div class="gallery-placeholder">🍁</div>
+          <div class="gallery-overlay">
+            <h4>秋日红叶</h4>
+            <p>层林尽染的秋天</p>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal">
+          <div class="gallery-placeholder">🌌</div>
+          <div class="gallery-overlay">
+            <h4>星空</h4>
+            <p>满天繁星</p>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal">
+          <div class="gallery-placeholder">🎆</div>
+          <div class="gallery-overlay">
+            <h4>花火大会</h4>
+            <p>夏日的烟花</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== Tab 5: About / 关于 ===== -->
+    <section id="about" class="tab-content" role="tabpanel" aria-label="关于">
+      <div class="section-header">
+        <h2 class="section-title">🌟 关于我</h2>
+        <p class="section-subtitle">一个热爱技术与二次元的开发者</p>
+      </div>
+      <div class="about-content">
+
+        <div class="about-intro reveal">
+          <div class="about-avatar">
+            <div class="about-avatar-inner">🌸</div>
+          </div>
+          <div class="about-text">
+            <h3>你好，我是 Camelia ✨</h3>
+            <p>
+              一名热爱前端开发的全栈工程师。从大学时代第一次写出 "Hello World" 开始，
+              就深深地被编程的魅力所吸引。喜欢研究各种新技术，也享受将创意变成现实的过程。
+            </p>
+            <p>
+              业余时间喜欢看动漫、玩游戏、拍照和旅行。相信生活不仅有眼前的代码，
+              还有远方的风景和温暖的相遇。这个博客就是我的小小天地，
+              记录着成长路上的点点滴滴。
+            </p>
+            <div class="bio-tags">
+              <span class="bio-tag">🚀 全栈开发</span>
+              <span class="bio-tag">🎨 设计爱好者</span>
+              <span class="bio-tag">📷 摄影新手</span>
+              <span class="bio-tag">🌸 二次元</span>
+              <span class="bio-tag">☕ 咖啡重度依赖</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="skills-section reveal">
+          <h3><i class="fas fa-cogs"></i> 技能</h3>
+          <div class="skills-grid">
+            <div class="skill-item" data-percent="90">
+              <div class="skill-header"><span>HTML / CSS</span><span>90%</span></div>
+              <div class="skill-bar"><div class="skill-bar-fill"></div></div>
+            </div>
+            <div class="skill-item" data-percent="85">
+              <div class="skill-header"><span>JavaScript / TypeScript</span><span>85%</span></div>
+              <div class="skill-bar"><div class="skill-bar-fill"></div></div>
+            </div>
+            <div class="skill-item" data-percent="80">
+              <div class="skill-header"><span>React / Next.js</span><span>80%</span></div>
+              <div class="skill-bar"><div class="skill-bar-fill"></div></div>
+            </div>
+            <div class="skill-item" data-percent="75">
+              <div class="skill-header"><span>Vue 3</span><span>75%</span></div>
+              <div class="skill-bar"><div class="skill-bar-fill"></div></div>
+            </div>
+            <div class="skill-item" data-percent="70">
+              <div class="skill-header"><span>Node.js</span><span>70%</span></div>
+              <div class="skill-bar"><div class="skill-bar-fill"></div></div>
+            </div>
+            <div class="skill-item" data-percent="60">
+              <div class="skill-header"><span>Python</span><span>60%</span></div>
+              <div class="skill-bar"><div class="skill-bar-fill"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline -->
+        <div class="timeline-section reveal">
+          <h3><i class="fas fa-road"></i> 经历</h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">2026 · 至今</div>
+              <div class="timeline-title">高级前端工程师</div>
+              <div class="timeline-desc">某科技公司 · 负责核心产品的前端架构设计与开发</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">2024 - 2026</div>
+              <div class="timeline-title">前端开发工程师</div>
+              <div class="timeline-desc">某互联网公司 · 参与多个 B 端与 C 端项目的开发</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">2020 - 2024</div>
+              <div class="timeline-title">计算机科学与技术 · 本科</div>
+              <div class="timeline-desc">某大学 · 学习编程基础，参与开源项目，打下扎实的技术功底</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">2019</div>
+              <div class="timeline-title">第一次写 Hello World</div>
+              <div class="timeline-desc">故事从这里开始 🚀</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ Footer ============ -->
+  <footer>
+    <p>
+      Made with <span class="footer-heart">❤</span> by Camelia
+      &nbsp;·&nbsp; © 2026 All Rights Reserved
+      &nbsp;·&nbsp; <i class="fab fa-github"></i> <a href="https://github.com/Camelia" target="_blank" rel="noopener" style="color: inherit; text-decoration: none;">GitHub</a>
+    </p>
+  </footer>
+
+  <!-- ============ Back to Top ============ -->
+  <button class="back-to-top" id="backToTop" aria-label="返回顶部">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- ============ Lightbox ============ -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" aria-label="关闭">&times;</button>
+    <img id="lightboxImg" src="" alt="">
+  </div>
+
+  <!-- ============ Scripts ============ -->
+  <script src="js/main.js"></script>
+</body>
+</html>

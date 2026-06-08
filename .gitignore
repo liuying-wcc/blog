@@ -1,0 +1,12 @@
+# OS generated files
+.DS_Store
+Thumbs.db
+*.swp
+
+# IDE
+.vscode/
+.idea/
+*.sublime-*
+
+# Dependencies (if any)
+node_modules/
