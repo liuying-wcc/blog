@@ -17,28 +17,25 @@ window.addEventListener('load', () => {
 });
 
 // ========================================================================
-// 2. Sakura Petals — 飘落樱花
+// 2. Firefly Particles — 流萤飞舞
 // ========================================================================
-(function initSakura() {
+(function initFireflies() {
   const container = document.getElementById('sakura-container');
   if (!container) return;
 
-  const petalCount = window.innerWidth < 768 ? 15 : 30;
+  const count = window.innerWidth < 768 ? 12 : 25;
 
-  for (let i = 0; i < petalCount; i++) {
-    const petal = document.createElement('div');
-    petal.className = 'sakura-petal';
-    const size = 12 + Math.random() * 14;
-    petal.style.width = size + 'px';
-    petal.style.height = size + 'px';
-    petal.style.left = Math.random() * 100 + '%';
-    petal.style.animationDuration = 8 + Math.random() * 12 + 's';
-    petal.style.animationDelay = Math.random() * 15 + 's';
-    petal.style.opacity = 0.3 + Math.random() * 0.4;
-    // Randomize pink hue slightly
-    const hue = 330 + Math.random() * 30; // 330-360 (pink range)
-    petal.style.background = `hsl(${hue}, 80%, 75%)`;
-    container.appendChild(petal);
+  for (let i = 0; i < count; i++) {
+    const firefly = document.createElement('div');
+    firefly.className = 'firefly';
+    firefly.style.left = Math.random() * 100 + '%';
+    firefly.style.animationDuration = 10 + Math.random() * 14 + 's';
+    firefly.style.animationDelay = Math.random() * 20 + 's';
+    // Vary the green glow slightly
+    const glow = 200 + Math.random() * 55; // 200-255
+    firefly.style.background = `rgba(0, ${glow}, 136, 0.9)`;
+    firefly.style.boxShadow = `0 0 8px rgba(0, ${glow}, 136, 0.6), 0 0 16px rgba(0, ${glow}, 136, 0.3)`;
+    container.appendChild(firefly);
   }
 })();
 
@@ -150,10 +147,11 @@ window.addEventListener('scroll', () => {
   if (!typedTextEl) return;
 
   const phrases = [
-    '前端开发 · 动漫爱好者',
-    '在代码的世界里寻找诗意 🌸',
-    '用热爱驱动每一个像素',
-    'いつも感謝の気持ちを忘れずに',
+    '🦋 「带我飞向天空吧」 —— 流萤',
+    '🔥 SAM 机甲 · 变身！',
+    '💚 就算终将化为灰烬，也要照亮夜空',
+    '🌸 崩坏：星穹铁道 · 流萤单推人',
+    '✨ 萤火虽微，愿为其芒',
   ];
 
   let phraseIndex = 0;
@@ -363,9 +361,9 @@ document.addEventListener('keydown', (e) => {
 // 13. Console Easter Egg — 彩蛋
 // ========================================================================
 console.log(
-  '%c🌸 Sakura Dream Blog %c🌸',
-  'font-size:20px; font-weight:bold; color:#ff6b9d;',
-  'font-size:14px; color:#c44dff;'
+  '%c🦋 Firefly Blog · 流萤 %c🦋',
+  'font-size:20px; font-weight:bold; color:#00ff88;',
+  'font-size:14px; color:#a0e0ff;'
 );
-console.log('%c在代码的世界里寻找诗意 ✨', 'font-size:14px; color:#5a5a7a;');
-console.log('%c📮 联系方式: camelia@example.com', 'font-size:12px; color:#9999b3;');
+console.log('%c「就算终将化为灰烬，也要在燃尽之前照亮夜空」', 'font-size:14px; color:#a0aab8;');
+console.log('%c🔥 SAM 机甲 · 全武装启动', 'font-size:12px; color:#6a7282;');
