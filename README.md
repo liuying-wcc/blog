@@ -45,3 +45,7 @@ git push -u origin main
 ## 📄 许可
 
 MIT License · Made with ❤️ for 流萤
+
+---
+
+*🦋 萤火虽微，愿为其芒。*
